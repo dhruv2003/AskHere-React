@@ -1,7 +1,7 @@
 import { Card, TextField, useTheme } from "@mui/material";
 import React from "react";
 
-const Header = () => {
+const Question = (props) => {
 	const theme = useTheme();
 	return (
 		<Card
@@ -11,10 +11,13 @@ const Header = () => {
 				// borderRadius="20px",
 			}}
 		>
-			<TextField variant="standard" fullWidth label="Title" />
-			<TextField variant="standard" fullWidth label="Description" />
+			<TextField variant="standard" fullWidth multiline label="Question Title" />
+            <TextField select label="Select"/>
+            helperText="Please select your currency"
+            
+            
 		</Card>
 	);
 };
 
-export default Header;
+export default Question;

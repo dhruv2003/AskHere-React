@@ -1,16 +1,38 @@
 // import React from "react";
 import Header from "./Header";
 import { Box } from "@mui/material";
-
+import AddQuestionButton from "./Question/addQuestionButton";
+import { useState } from "react";
+import Question from "./Question/Question";
 
 const CreateForm = () => {
+	const [questions, setQuestions] = useState([
+		{
+			title: "Untitled 1",
+			type: "checkbox",
+			options: ["option 1"],
+		},
+	]);
+
+	const handleAdd = () => {
+		setQuestions([
+			...questions,
+			{
+				title: "Untitled 1",
+				type: "string",
+			},
+		]);
+	};
+
 	return (
-		<div>
 		<Box className="header-element">
 			<Header />
+			<AddQuestionButton handleAdd={handleAdd} />
+			{questions.map((question) => {
+				return <div>hello</div>;
+			})}
+			<Question />
 		</Box>
-		</div>
-		
 	);
 };
 
