@@ -3,10 +3,11 @@
 // 3. created
 // 4. number of responses
 
-import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
+
 
 const FormList = ({ item }) => {
 	console.log(item);
@@ -16,12 +17,11 @@ const FormList = ({ item }) => {
 				<Typography gutterBottom variant="h5" component="h2">
 					{item.name}
 				</Typography>
-        {item.description.length<=25 ? (
-          <Typography >{item.description}</Typography>
-        ):(
-          <Typography>{item.description.slice(0,25)+'...'}</Typography>
-        )}
-				
+				{item.description.length <= 25 ? (
+					<Typography>{item.description}</Typography>
+				) : (
+					<Typography>{item.description.slice(0, 25) + "..."}</Typography>
+				)}
 
 				<Box
 					sx={{

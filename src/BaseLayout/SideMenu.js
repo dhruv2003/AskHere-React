@@ -9,7 +9,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from "@mui/icons-material/Dashboard"
-
+import CreateIcon from '@mui/icons-material/Create';
 import { NavLink } from "react-router-dom";
 
 import { Box } from "@mui/system";
@@ -23,6 +23,12 @@ const listItems = [
         to: "/dashboard",
         name: "Dashboard",
         icon: <DashboardIcon />
+    },
+    {
+        key: "createForm",
+        to: "/createform",
+        name: "Create Form",
+        icon: <CreateIcon />
     },
 ];
 

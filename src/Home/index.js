@@ -21,7 +21,7 @@ const listItems = [
 	{
 		id: 2,
 		name: "Pranay",
-		description: "Ghumta rehta hai kisi ",
+		description: "Ghumta rehta hai kisi ke sath",
 		created: "20-12-2003",
 		NumberOfResponse: 10,
 	},

@@ -1,9 +1,26 @@
-.formItem{
+/* body {
+	background-color: gray;
+} */
 
-  margin-left: 1vw;
+.formItem {
+	margin-left: 1vw;
 }
-.itemspan{
-  display:flex;
-  flex-direction: row;
-  margin-top:5px;
+.itemspan {
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+}
+
+.formItem {
+	border-radius: 200px;
+	background-color: lightblue;
+}
+
+.header-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 100vh; */
+	/* padding-left: 5vw; */
+	
 }
