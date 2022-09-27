@@ -24,7 +24,6 @@ const listItems = [
         name: "Dashboard",
         icon: <DashboardIcon />
     },
-    
 ];
 
 const SidebarGlobalStyles = () => {
@@ -51,6 +50,7 @@ const SidebarGlobalStyles = () => {
         />
     );
 };
+
 const SidebarGlobalStylesMemo = React.memo(SidebarGlobalStyles);
 
 export function SideMenu(props) {
