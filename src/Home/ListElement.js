@@ -16,7 +16,12 @@ const FormList = ({ item }) => {
 				<Typography gutterBottom variant="h5" component="h2">
 					{item.name}
 				</Typography>
-				<Typography>{item.description}</Typography>
+        {item.description.length<=25 ? (
+          <Typography >{item.description}</Typography>
+        ):(
+          <Typography>{item.description.slice(0,25)+'...'}</Typography>
+        )}
+				
 
 				<Box
 					sx={{
@@ -27,13 +32,15 @@ const FormList = ({ item }) => {
 				>
 					<span className="itemspan">
 						<DateRangeIcon></DateRangeIcon>
-						<Typography variant="bold" sx={{ marginLeft: 2,marginRight:2 }}>
+						<Typography variant="bold" sx={{ marginLeft: 2, marginRight: 2 }}>
 							{item.created}
 						</Typography>
 					</span>
 					<span className="itemspan">
 						<QuestionAnswerIcon />
-						<Typography>{item.NumberOfResponse}</Typography>
+						<Typography sx={{ marginLeft: 2, marginRight: 2 }}>
+							{item.NumberOfResponse}
+						</Typography>
 					</span>
 				</Box>
 			</CardContent>
