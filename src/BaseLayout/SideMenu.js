@@ -20,7 +20,7 @@ const drawerWidth = 240;
 const listItems = [
     {
         key: "dashboard",
-        to: "/dashboard",
+        to: "/",
         name: "Dashboard",
         icon: <DashboardIcon />
     },
