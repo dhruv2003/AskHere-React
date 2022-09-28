@@ -1,37 +1,41 @@
-// import React from "react";
 import Header from "./Header";
 import { Box } from "@mui/material";
 import AddQuestionButton from "./addQuestionButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Question from "./Question/Question.js";
 
 const CreateForm = () => {
-	const [questions, setQuestions] = useState([
-		{
-			title: "Untitled 1",
-			type: "checkbox",
-			options: ["option 1"],
-		},
-	]);
+	const [header, setHeader] = useState({
+		title: "",
+		description: "",
+	});
+
+	const [questions, setQuestions] = useState([]);
+	
+	useEffect(()=>{
+		console.log(questions)
+	},[questions])
+
 
 	const handleAdd = () => {
 		setQuestions([
 			...questions,
 			{
+				
 				title: "Untitled 1",
-				type: "string",
+				type: "choice",
+				choices: [],
 			},
 		]);
 	};
 
 	return (
 		<Box className="createform-container">
-			<Header />
+			<Header header={header} setHeader={setHeader} />
 			<AddQuestionButton handleAdd={handleAdd} />
-			{questions.map((question) => {
-				return <Question />;
+			{questions.map((question,index) => {
+				return <Question ques={question} key={index}/>;
 			})}
-			
 		</Box>
 	);
 };
@@ -39,14 +43,13 @@ const CreateForm = () => {
 export default CreateForm;
 
 // {
-// 	name,
-//     FormName,
-//     formDescription,
-//     Questions:[
+//     title,
+//     description,
+//     questions:{
 //         {
-//             title,
-//             type,
-
+//             question:"",
+//             type:"",
+//             choices:[],
 //         }
-//     ]
+//     }
 // }

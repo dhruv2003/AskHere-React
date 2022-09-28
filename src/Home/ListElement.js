@@ -10,7 +10,6 @@ import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
 
 
 const FormList = ({ item }) => {
-	console.log(item);
 	return (
 		<Card key={item.id} className="formItem">
 			<CardContent>
