@@ -25,13 +25,13 @@ const CreateForm = () => {
 	};
 
 	return (
-		<Box className="header-element">
+		<Box className="createform-container">
 			<Header />
 			<AddQuestionButton handleAdd={handleAdd} />
 			{questions.map((question) => {
-				return <div>hello</div>;
+				return <Question />;
 			})}
-			<Question />
+			
 		</Box>
 	);
 };

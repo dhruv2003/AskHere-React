@@ -8,6 +8,7 @@ const Header = () => {
 			sx={{
 				padding: 5,
 				backgroundColor: theme.palette.primary.main,
+			
 				// borderRadius="20px",
 			}}
 		>
