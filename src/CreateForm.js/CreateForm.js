@@ -1,9 +1,9 @@
 // import React from "react";
 import Header from "./Header";
 import { Box } from "@mui/material";
-import AddQuestionButton from "./Question/addQuestionButton";
+import AddQuestionButton from "./addQuestionButton";
 import { useState } from "react";
-import Question from "./Question/Question";
+import Question from "./Question/Question.js";
 
 const CreateForm = () => {
 	const [questions, setQuestions] = useState([
