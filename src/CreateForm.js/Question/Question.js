@@ -54,7 +54,7 @@ const Question = (props) => {
           <MenuItem value={"choice"}>Multiple Choice</MenuItem>
           <MenuItem value={"string"}>Short Answer</MenuItem>
         </Select>
-        {/* {(type=="choice")?<Option/>:<CustomAnswer/>} */}
+      {(type=="choice")?<Option/>:<CustomAnswer/>}
       </Box>
       {/* <FormControl fullWidth sx={{marginBottom:2}}>
         <InputLabel >Input Type</InputLabel>
