@@ -45,11 +45,11 @@ export default CreateForm;
 // {
 //     title,
 //     description,
-//     questions:{
+//     questions:[
 //         {
 //             question:"",
 //             type:"",
 //             choices:[],
 //         }
-//     }
+//     ]
 // }
