@@ -6,6 +6,7 @@ import {
 	Select,
 	Box,
 	Button,
+	Grid
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Option from "./Option";
@@ -29,7 +30,7 @@ const Question = ({ques}) => {
 		setQuestion({
 			title,
 			type,
-      	choices
+      		choices,
 		});
 	}, [title, type,choices]);
 
@@ -78,11 +79,19 @@ const Question = ({ques}) => {
 				</Select>
 			</Box>
 			{type === "choice" ? (
+				<Grid container direction="row">
+				<Grid>
 				<Option choices={choices} handleChoiceChange={setChoices} />
+				</Grid>
+
+				<Grid>
+				<Button variant="contained" onClick={AddChoice} sx={{marginLeft:2,height:"53px"}}>Add choice</Button>
+				</Grid>
+				</Grid>
 			) : (
 				<ShortAnswer />
 			)}
-			<Button variant="contained" onClick={AddChoice}>Add choice</Button>
+			
 		</Card>
 	);
 };
