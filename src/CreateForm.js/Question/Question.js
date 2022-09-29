@@ -6,15 +6,15 @@ import {
 	Select,
 	Box,
 	Button,
-	Grid
+	Grid,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Option from "./Option";
 import ShortAnswer from "./ShortAnswer";
 
-let nextID=0
+let nextID = 0;
 
-const Question = ({ques}) => {
+const Question = ({ ques }) => {
 	const theme = useTheme();
 	const [type, setType] = useState(ques.type);
 	const [title, setTitle] = useState(ques.title);
@@ -30,15 +30,15 @@ const Question = ({ques}) => {
 		setQuestion({
 			title,
 			type,
-      		choices,
+			choices,
 		});
-	}, [title, type,choices]);
+	}, [title, type, choices]);
 
 	const handleChange = (event) => {
 		setType(event.target.value);
 	};
 	const AddChoice = () => {
-		let list=choices.concat({id:nextID++, name:"untitled"})
+		let list = choices.concat({ id: nextID++, name: "untitled" });
 		setChoices(list);
 	};
 
@@ -79,19 +79,13 @@ const Question = ({ques}) => {
 				</Select>
 			</Box>
 			{type === "choice" ? (
-				<Grid container direction="row">
-				<Grid>
-				<Option choices={choices} handleChoiceChange={setChoices} />
-				</Grid>
-
-				<Grid>
-				<Button variant="contained" onClick={AddChoice} sx={{marginLeft:2,height:"53px"}}>Add choice</Button>
-				</Grid>
-				</Grid>
+				<>
+					<Option choices={choices} handleChoiceChange={setChoices} AddChoice={AddChoice}/>
+					
+				</>
 			) : (
 				<ShortAnswer />
 			)}
-			
 		</Card>
 	);
 };

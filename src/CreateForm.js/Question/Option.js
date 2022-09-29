@@ -1,16 +1,16 @@
 import { Box, TextField, Button } from "@mui/material";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const Option = ({ choices, handleChoiceChange }) => {
-
-
+const Option = ({ choices, handleChoiceChange, AddChoice }) => {
+	const last = choices.length - 1;
 
 	return (
 		<>
-			{choices.map((choice) => {
+			{choices.map((choice, index) => {
 				return (
-					<Box key={choice.id}
+					<Box
+						key={choice.id}
 						sx={{
 							display: "flex",
 							justifyContent: "flex-start",
@@ -18,9 +18,16 @@ const Option = ({ choices, handleChoiceChange }) => {
 							marginBottom: "1vh",
 						}}
 					>
-						<Button variant="filled" onClick={() => handleChoiceChange(choices.filter(a=>{
-							return a.id!==choice.id
-						}))}>
+						<Button
+							variant="filled"
+							onClick={() =>
+								handleChoiceChange(
+									choices.filter((a) => {
+										return a.id !== choice.id;
+									})
+								)
+							}
+						>
 							<RemoveCircleOutlineIcon />
 						</Button>
 						<TextField
@@ -29,6 +36,18 @@ const Option = ({ choices, handleChoiceChange }) => {
 							}}
 							defaultValue={choice.name}
 						></TextField>
+						{last === index ? (
+							<Button
+								variant="contained"
+								onClick={AddChoice}
+								sx={{ marginLeft: 2, height: "53px" }}
+							>
+								Add choice
+							</Button>
+						) : (
+							<></>
+						)}
+						
 					</Box>
 				);
 			})}
