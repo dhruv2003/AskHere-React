@@ -13,7 +13,7 @@ const CreateForm = () => {
 	const [questions, setQuestions] = useState([]);
 	
 	useEffect(()=>{
-		console.log(questions)
+		// console.log(questions)
 	},[questions])
 
 
@@ -24,7 +24,7 @@ const CreateForm = () => {
 				
 				title: "Untitled 1",
 				type: "choice",
-				choices: [""],
+				choices: [],
 			},
 		]);
 	};

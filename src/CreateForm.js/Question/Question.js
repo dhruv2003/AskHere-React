@@ -6,7 +6,6 @@ import {
 	Select,
 	Box,
 	Button,
-	Grid,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Option from "./Option";
@@ -21,9 +20,9 @@ const Question = ({ ques }) => {
 	const [choices, setChoices] = useState(ques.choices);
 
 	const [question, setQuestion] = useState({
-		title: "",
-		type: "",
-		choices: [],
+		title: title,
+		type: type,
+		choices
 	});
 
 	useEffect(() => {
@@ -38,16 +37,18 @@ const Question = ({ ques }) => {
 		setType(event.target.value);
 	};
 	const AddChoice = () => {
-		let list = choices.concat({ id: nextID++, name: "untitled" });
+		let list = choices.concat({ id: nextID++, name: "" });
 		setChoices(list);
 	};
 
-	// const removeChoice=(choice)=>{
-	// 	let templist=choices
-	// 	templist.splice(choice,1)
-	// 	console.log(templist)
-	// 	setChoices([...templist])
-	// }
+	const handleSave = () => {
+		const data = {
+			title,
+			type,
+			options:choices,
+		};
+		console.log(data);
+	};
 
 	return (
 		<Card
@@ -80,12 +81,33 @@ const Question = ({ ques }) => {
 			</Box>
 			{type === "choice" ? (
 				<>
-					<Option choices={choices} handleChoiceChange={setChoices} AddChoice={AddChoice}/>
-					
+					<Option
+						choices={choices}
+						handleChoiceChange={setChoices}
+						AddChoice={AddChoice}
+						setChoices={setChoices}
+					/>
 				</>
 			) : (
-				<ShortAnswer />
+				<></>
 			)}
+			<Box>
+			{type==='choice'?(<Button
+					variant="contained"
+					onClick={AddChoice}
+					sx={{ marginLeft: 10, height: "53px" }}
+				>
+					Add choice
+				</Button>):(
+					<></>
+				)}
+				
+				<Button variant="contained" sx={{
+					height:"53px", marginLeft:2
+				}} onClick={handleSave}>
+					Save
+				</Button>
+			</Box>
 		</Card>
 	);
 };
@@ -99,8 +121,7 @@ export default Question;
 //       {
 //           question:"",
 //           type:"",
-//           choices:[],
-//           answer:""
+//           choices:[]
 //       }
 //   ]
 // }

@@ -1,10 +1,10 @@
 import { Card, TextField, useTheme } from "@mui/material";
 import React, { useState, useEffect } from "react";
 
-const Header = ({ setHeader }) => {
+const Header = ({ setHeader ,header}) => {
 	const theme = useTheme();
-	const [title, setTitle] = useState("");
-	const [description, setDescription] = useState("");
+	const [title, setTitle] = useState(header.title);
+	const [description, setDescription] = useState(header.description);
 
 	useEffect(() => {
 		setHeader({
