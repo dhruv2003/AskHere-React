@@ -1,10 +1,13 @@
-import {TextField} from "@mui/material";
-  import React, { useState } from "react";
 
+  import React from "react";
+  import {
+    TextField,
+  } from "@mui/material";
   
   const Question = () => {
+
     return (
-     <TextField></TextField>
+            <TextField id="outlined-basic" label="Answer" disabled variant="outlined" sx={{marginRight:2}} />
     );
   };
   

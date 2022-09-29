@@ -12,7 +12,6 @@ const AuthContextProvider = ({ children }) => {
 	const [user, setUser] = useState(null);
 
 	const loadAuthUser = () => {
-        console.log("hello")
 		const authToken = localStorage.getItem("authToken");
 		if (!authToken) {
 			setIsAuthenticated(true);

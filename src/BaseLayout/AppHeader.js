@@ -15,7 +15,7 @@ import PropTypes from "prop-types";
 import { AccountCircle } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
-// import { AuthContext } from "src/contexts/AuthContextProvider";
+import { AuthContext } from "../contexts/AuthContextProvider";
 // import { ThemeModeContext } from "src/contexts/ThemeModeProvider";
 // import useRequestAuth from "src/hooks/useRequestAuth";
 
@@ -33,16 +33,14 @@ const modalStyle = {
 };
 
 export function AppHeader({ mobileOpen, setMobileOpen }) {
-    // const themeMode = React.useContext(ThemeModeContext);
-    const theme = useTheme()
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const [modalIsOpen, setModalIsOpen] = React.useState(false);
-    // const { user } = React.useContext(AuthContext);
+    const { user } = React.useContext(AuthContext);
     // const { logout, logoutPending } = useRequestAuth();
 
     const handleLogout = () => {
-        // logout();
+        localStorage.removeItem('authToken')
     }
 
     const handleOpenModal = () => {
@@ -74,7 +72,7 @@ export function AppHeader({ mobileOpen, setMobileOpen }) {
                 }}>
                     Profile
                 </Typography>
-                {/* <TextField id="username"
+                <TextField id="username"
                     variant="outlined"
                     label="Username"
                     value={user ? user.username : ""}
@@ -83,8 +81,8 @@ export function AppHeader({ mobileOpen, setMobileOpen }) {
                         mb: 3,
                         width: "100%"
                     }}
-                /> */}
-                {/* <TextField id="email"
+                />
+                <TextField id="email"
                     variant="outlined"
                     label="Email"
                     value={user ? user.email : ""}
@@ -93,7 +91,7 @@ export function AppHeader({ mobileOpen, setMobileOpen }) {
                         mb: 3,
                         width: "100%"
                     }}
-                /> */}
+                />
             </Box>
         </Modal>
     )

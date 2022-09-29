@@ -65,6 +65,7 @@ const Home = () => {
 			<Grid container spacing={4}
 				sx={{
 					marginTop: "1vh",
+					marginBottom:"1vh"
 				}}
 			>
 				{listItems.map((item) => {
