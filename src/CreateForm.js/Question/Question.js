@@ -9,29 +9,15 @@ import {
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Option from "./Option";
-import ShortAnswer from "./ShortAnswer";
 
 let nextID = 0;
 
-const Question = ({ ques }) => {
+const Question = ({ ques, setQuestions, questions }) => {
 	const theme = useTheme();
 	const [type, setType] = useState(ques.type);
 	const [title, setTitle] = useState(ques.title);
-	const [choices, setChoices] = useState(ques.choices);
+	const [choices, setChoices] = useState(ques.options);
 
-	const [question, setQuestion] = useState({
-		title: title,
-		type: type,
-		choices
-	});
-
-	useEffect(() => {
-		setQuestion({
-			title,
-			type,
-			choices,
-		});
-	}, [title, type, choices]);
 
 	const handleChange = (event) => {
 		setType(event.target.value);
@@ -41,13 +27,17 @@ const Question = ({ ques }) => {
 		setChoices(list);
 	};
 
-	const handleSave = () => {
-		const data = {
-			title,
-			type,
-			options:choices,
-		};
-		console.log(data);
+	const handleSave = () => {	
+
+		let templist = questions;
+		for (let i = 0; i < templist.length; i++) {
+			if (templist[i]["id"] === ques.id) {
+				templist[i]["title"] = title;
+				templist[i]["type"] = type;
+				templist[i]["options"] = choices;
+			}
+		}
+		setQuestions(templist)
 	};
 
 	return (
@@ -92,19 +82,26 @@ const Question = ({ ques }) => {
 				<></>
 			)}
 			<Box>
-			{type==='choice'?(<Button
-					variant="contained"
-					onClick={AddChoice}
-					sx={{ marginLeft: 10, height: "53px" }}
-				>
-					Add choice
-				</Button>):(
+				{type === "choice" ? (
+					<Button
+						variant="contained"
+						onClick={AddChoice}
+						sx={{ marginLeft: 10, height: "53px" }}
+					>
+						Add choice
+					</Button>
+				) : (
 					<></>
 				)}
-				
-				<Button variant="contained" sx={{
-					height:"53px", marginLeft:2
-				}} onClick={handleSave}>
+
+				<Button
+					variant="contained"
+					sx={{
+						height: "53px",
+						marginLeft: 2,
+					}}
+					onClick={handleSave}
+				>
 					Save
 				</Button>
 			</Box>
