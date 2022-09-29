@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 
 const Header = ({ setHeader }) => {
 	const theme = useTheme();
-	
-
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
 

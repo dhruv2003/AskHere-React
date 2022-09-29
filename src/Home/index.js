@@ -56,6 +56,13 @@ const listItems = [
 		created: "20-12-2003",
 		NumberOfResponse: 10,
 	},
+	{
+		id: 7,
+		name: "Pranay",
+		description: "Ghumta rehta hai kisi ke sath",
+		created: "20-12-2003",
+		NumberOfResponse: 10,
+	},
 ];
 
 const Home = () => {

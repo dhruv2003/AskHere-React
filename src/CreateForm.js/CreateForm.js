@@ -24,7 +24,7 @@ const CreateForm = () => {
 				
 				title: "Untitled 1",
 				type: "choice",
-				choices: [],
+				choices: [""],
 			},
 		]);
 	};
