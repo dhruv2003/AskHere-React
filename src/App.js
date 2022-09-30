@@ -4,16 +4,18 @@ import Login from "./Auth/Login";
 import Home from "./Home";
 import BaseLayout from "./BaseLayout";
 import Register from "./Auth/Register";
-import CreateForm from "./CreateForm.js/CreateForm";
+import CreateForm from "./CreateForm/CreateForm";
 import AuthContextProvider from "./contexts/AuthContextProvider";
 import { RequireAuth } from "./helper/RequireAuth";
 import { RequireNotAuth } from "./helper/RequireNotAuth";
+import UserForm from "./UserForm";
 
 function App() {
 	return (
 		<AuthContextProvider>
 			<Router>
 				<Routes>
+					<Route  exact path="/form/:id" element={<UserForm/>}/>
 					<Route element={<RequireNotAuth />}>
 						<Route exact path="/login" element={<Login />} />
 						<Route exact path="/register" element={<Register />} />

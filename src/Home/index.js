@@ -77,7 +77,7 @@ const Home = () => {
 			>
 				{listItems.map((item) => {
 					return (
-						<Grid item xs={3}>
+						<Grid item xs={3} key={item.id}>
 							<ListElement item={item} />
 						</Grid>
 					);
