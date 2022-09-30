@@ -26,7 +26,3 @@ const Option = ({ choices, handleChoiceChange, AddChoice, setChoices }) => {
 
 export default Option;
 
-// [
-//   "vedantika",
-//   "pranay"
-// ]
