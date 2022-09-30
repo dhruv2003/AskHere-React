@@ -39,15 +39,13 @@ const CreateForm = () => {
 			<Header header={header} setHeader={setHeader} />
 			<Box sx={{
 				display:"flex",
-			}}>
-			<AddQuestionButton handleAdd={handleAdd} />
-			<Button variant="contained" onClick={()=>{console.log(questions)}}
-			sx={{
 				position: "fixed",
 				bottom: "20px",
     			right: "10px",
-
+				flexDirection:"column"
 			}}>
+			<AddQuestionButton handleAdd={handleAdd} />
+			<Button variant="contained" onClick={()=>{console.log(questions)}}>
         	Save
       		</Button>
 			</Box>

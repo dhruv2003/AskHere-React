@@ -10,12 +10,10 @@ const addQuestionButton = (props) => {
 		<Button onClick={()=>props.handleAdd()}
 			variant="contained"
 			sx={{
-				position: "fixed",
-				bottom: "70px",
-    			right: "10px",
+				margin:1
 			}}
 		>
-			<AddIcon sx={{padding:1}}/>
+			<AddIcon />
 		</Button>
 	);
 };
