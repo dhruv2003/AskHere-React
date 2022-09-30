@@ -1,3 +1,4 @@
+import { Box ,Paper, Typography} from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
 
@@ -32,7 +33,20 @@ let data = {
 
 const UserForm = () => {
 	const { id } = useParams();
-	return <div>{id}</div>;
+	return <Box sx={{
+		 textAlign:"center",
+		 
+	}}>
+		<Paper sx={{
+			width:"50vw",
+			padding:"4%",
+			borderRadius:"5%"
+						
+		}} className="header">
+			<div className="headerName">{data.name}</div>
+			<div className="headerDesc">{data.description}</div>
+		</Paper>
+	</Box>;
 };
 
 export default UserForm;
