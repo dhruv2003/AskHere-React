@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import styles from "./UserForm.module.css";
@@ -9,20 +9,24 @@ let data = {
 	description: "Give your best",
 	questions: [
 		{
+			id:0,
 			type: "answer",
 			title: "What is your name",
 		},
 		{
+			id:1,
 			type: "answer",
 			title: "What is your Name",
 		},
 		{
+			id:2,
 			type: "answer",
 			title: "What is your Name",
 		},
 		{
+			id:3,
 			type: "choice",
-			title: "Position: ",
+			title: "Position ",
 			options: [
 				{
 					id: 0,
@@ -45,7 +49,7 @@ let nextID = 0;
 
 const UserForm = () => {
 	const { id } = useParams();
-
+	const [result,setResult]=useState([])
 	
 	return (
 		<div className={styles.container}>
@@ -73,7 +77,7 @@ const UserForm = () => {
 
 			{data.questions.map((question) => {
 				return (
-					<Question question={question} key={nextID++}/>
+					<Question question={question} key={question.id} setResult={setResult}/>
 				);
 			})}
 		</div>
@@ -98,3 +102,4 @@ export default UserForm;
 //     }
 //   ]
 // }
+

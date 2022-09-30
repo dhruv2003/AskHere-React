@@ -5,9 +5,6 @@ const Choices = ({ options: choices }) => {
 	const [res, setRes] = useState([]);
 	const [options, setOptions] = useState(choices);
 
-	useEffect(() => {
-		console.log(res);
-	}, [res]);
 
 	return (
 		<>
