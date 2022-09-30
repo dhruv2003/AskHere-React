@@ -1,0 +1,32 @@
+.header{
+	align-items: center;
+	background-color: #DEF2F1;
+	text-align: center;
+	width:800px;
+	border-radius: 20px;
+	
+	
+}
+
+.headerDesc{
+	font-family: "Alkalami", serif;
+	font-size:2.5vw;
+}
+
+.headerName {
+	font-family: "Alkalami", serif;
+	font-size:5vw;
+}
+.container{
+	width: 100%;
+	height:100%;
+	background-color: #3AAFA9;
+	padding-top: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+

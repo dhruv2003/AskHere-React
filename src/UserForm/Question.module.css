@@ -1,0 +1,27 @@
+.question{
+	border-radius: 20px;
+	margin:20px;
+	display: flex;
+	background-color: #DEF2F1;
+	flex-direction: column;
+	width:800px;
+}
+
+
+.title{
+	padding-top: 2px;
+	padding-left: 15px;
+	text-align: left;
+}
+
+
+.answer{
+    width:95%;
+    height:100px;
+    border-radius: 10px;
+    resize:vertical;
+    margin: 15px;
+    margin-left: 2.5%;
+    align-items: center;
+    border: none;
+}

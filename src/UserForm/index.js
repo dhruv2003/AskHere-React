@@ -1,15 +1,25 @@
-import { Box ,Paper, Typography} from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import styles from "./UserForm.module.css";
+import Question from "./Question";
 
 let data = {
 	name: "FY Rep Forms",
 	description: "Give your best",
 	questions: [
-    {
-      type:"answer",
-      title:"Name"
-    },
+		{
+			type: "answer",
+			title: "What is your name",
+		},
+		{
+			type: "answer",
+			title: "What is your Name",
+		},
+		{
+			type: "answer",
+			title: "What is your Name",
+		},
 		{
 			type: "choice",
 			title: "Position: ",
@@ -24,29 +34,50 @@ let data = {
 				},
 				{
 					id: 2,
-					name: "Creative",
+					name: "Creative Team",
 				},
 			],
-		}
+		},
 	],
 };
 
+let nextID = 0;
+
 const UserForm = () => {
 	const { id } = useParams();
-	return <Box sx={{
-		 textAlign:"center",
-		 
-	}}>
-		<Paper sx={{
-			width:"50vw",
-			padding:"4%",
-			borderRadius:"5%"
-						
-		}} className="header">
-			<div className="headerName">{data.name}</div>
-			<div className="headerDesc">{data.description}</div>
-		</Paper>
-	</Box>;
+
+	
+	return (
+		<div className={styles.container}>
+			<motion.div
+				initial={{
+					scale: 0.5,
+					opacity: 0.7,
+				}}
+				animate={{
+					scale: 1,
+					opacity: 1,
+				}}
+			>
+				<motion.div
+					className={styles.header}
+					whileHover={{
+						x: -10,
+						boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
+					}}
+				>
+					<div className={styles.headerName}>{data.name}</div>
+					<div className={styles.headerDesc}>{data.description}</div>
+				</motion.div>
+			</motion.div>
+
+			{data.questions.map((question) => {
+				return (
+					<Question question={question} key={nextID++}/>
+				);
+			})}
+		</div>
+	);
 };
 
 export default UserForm;
