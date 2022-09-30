@@ -1,6 +1,7 @@
 import Header from "./Header";
 import { Box, Button } from "@mui/material";
-import AddQuestionButton from "./addQuestionButton";
+
+import AddQuestionButton from "./AddQuestionButton";
 import { useState, useEffect } from "react";
 import Question from "./Question/Question.js";
 let nextID=0;
@@ -36,8 +37,21 @@ const CreateForm = () => {
 	return (
 		<Box className="createform-container">
 			<Header header={header} setHeader={setHeader} />
+			<Box sx={{
+				display:"flex",
+			}}>
 			<AddQuestionButton handleAdd={handleAdd} />
-			<Button onClick={()=>{console.log(questions)}}>test</Button>
+			<Button variant="contained" onClick={()=>{console.log(questions)}}
+			sx={{
+				position: "fixed",
+				bottom: "20px",
+    			right: "10px",
+
+			}}>
+        	Save
+      		</Button>
+			</Box>
+			
 			{questions.map((question,index) => {
 				return <Question ques={question} questions={questions} key={question.id} setQuestions={setQuestions}/>;
 			})}
