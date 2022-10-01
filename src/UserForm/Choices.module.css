@@ -1,5 +1,12 @@
-.selected{
-    color:azure
-}
 
+
+.option{
+    width:90%;
+    border: solid rgba(0,0,0,0.3) 1px;
+    display: flex;
+    margin:1%;
+    padding:1%;
+    border-radius:10px;
+    gap:10px
+}
 

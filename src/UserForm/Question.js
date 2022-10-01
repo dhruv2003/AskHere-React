@@ -16,10 +16,16 @@ const Question = ({ question, setResult }) => {
 		<motion.div
 			key={nextID++}
 			initial={{
-				opacity:0
+				opacity:0,
+				x:-10,
+				
 			}}
 			whileInView={{
-				opacity:1
+				opacity:1,
+				x:0,
+				transition:{
+					delay:0.2
+				}
 			}}
 			whileHover={{
 				x: -10,
