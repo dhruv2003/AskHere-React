@@ -16,12 +16,12 @@ let data = {
 		{
 			id:1,
 			type: "answer",
-			title: "What is your Name",
+			title: "Why do you want to join Codecell",
 		},
 		{
 			id:2,
 			type: "answer",
-			title: "What is your Name",
+			title: "Describe yourself in 100 words",
 		},
 		{
 			id:3,

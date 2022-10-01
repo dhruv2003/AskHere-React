@@ -1,14 +1,14 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./Auth/Login";
-import Home from "./Home";
+import Login from "./components/Auth/Login";
+import Home from "./components/Home";
 import BaseLayout from "./BaseLayout";
-import Register from "./Auth/Register";
-import CreateForm from "./CreateForm/CreateForm";
+import Register from "./components/Auth/Register";
+import CreateForm from "./components/CreateForm/CreateForm";
 import AuthContextProvider from "./contexts/AuthContextProvider";
 import { RequireAuth } from "./helper/RequireAuth";
 import { RequireNotAuth } from "./helper/RequireNotAuth";
-import UserForm from "./UserForm";
+import UserForm from "./components/UserForm";
 
 function App() {
 	return (
