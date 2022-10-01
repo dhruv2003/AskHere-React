@@ -13,36 +13,38 @@ const Question = ({ question, setResult }) => {
 
 
 	return (
-		<div
+		<motion.div
 			key={nextID++}
-			// transition={{
-			// 	delay: 1,
-			// }}
-			// whileHover={{
-			// 	x: -10,
-			// 	boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
-			// }}
+			initial={{
+				opacity:0
+			}}
+			whileInView={{
+				opacity:1
+			}}
+			whileHover={{
+				x: -10,
+				boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
+			}}
 			className={styles.question}
 		>
+			<div className={styles.title}>{question.title}</div>
 			{question.type === "answer" && (
-				<div>
-					<div className={styles.title}>{question.title}</div>
+				
 					<input
 						className={styles.answer}
 						type="text"
                         value={answer}
                         onChange={handleChange}
 					></input>
-				</div>
+				
 			)}
 
 			{question.type === "choice" && (
-				<>
-					<div className={styles.title}>{question.title}</div>
+				
 					<Choices options={question.options} />
-				</>
+				
 			)}
-		</div>
+		</motion.div>
 	);
 };
 

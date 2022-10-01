@@ -7,7 +7,7 @@ import {
 	Box,
 	Button,
 } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Option from "./Option";
 
 let nextID = 0;

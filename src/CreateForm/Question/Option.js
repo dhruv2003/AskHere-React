@@ -1,5 +1,5 @@
 import Choice from "./Choice";
-import React, { useState } from "react";
+import React from "react";
 
 const Option = ({ choices, handleChoiceChange, AddChoice, setChoices }) => {
 	
