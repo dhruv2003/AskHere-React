@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Home from "./components/Home";
-import BaseLayout from "./BaseLayout";
+import BaseLayout from "./components/BaseLayout";
 import Register from "./components/Auth/Register";
 import CreateForm from "./components/CreateForm/CreateForm";
 import AuthContextProvider from "./contexts/AuthContextProvider";

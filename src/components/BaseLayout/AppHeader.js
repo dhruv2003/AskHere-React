@@ -15,7 +15,7 @@ import PropTypes from "prop-types";
 import { AccountCircle } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
-import { AuthContext } from "../contexts/AuthContextProvider";
+import { AuthContext } from "../../contexts/AuthContextProvider";
 // import { ThemeModeContext } from "src/contexts/ThemeModeProvider";
 // import useRequestAuth from "src/hooks/useRequestAuth";
 
