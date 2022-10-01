@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="" rel="noopener">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">AskHere - React</h1>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kjsce-codecell/Flutter-Keep/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kjsce-codecell/Flutter-Keep/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="center"> This is a open source Notes React app.
+</p>
 
-### `npm test`
+## 📝 Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [TODO](../TODO.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
+- [License](#license)
 
-### `npm run build`
+## 🧐 About <a name = "about"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+"**AskHere - React**" is an open-source react app that can run tests and gather information. This project was made using react for app creation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- React
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  To start you don't need to master this technologies, even if you are beginner feel free to go through and contribute.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To install this project repository directly click on above _Code_ and download zip file or clone this repository using git.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/kjsce-codecell/AskHere-React.git
+```
 
-## Learn More
+## 🎈 Usage <a name="usage"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run react app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+react run
+```
 
-### Code Splitting
+To download and use app [Click here](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Deployment <a name = "deployment"></a>
 
-### Analyzing the Bundle Size
+The app is not yet deployed anywhere but you can view [View](https://facebook.github.io/create-react-app/docs/deployment) from here and feel free to give suggestions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⛏️ Built Using <a name = "built_using"></a>
 
-### Making a Progressive Web App
+- [React] - Its aim is to allow developers to easily create fast user interfaces for websites and applications alike.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## ✍️ Authors <a name = "authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [@AryaNair](https://github.com/Arya-A-Nair/Arya-A-Nair)
+- [@PranaySingh](https://github.com/hailhydra1/hailhydra1)
 
-### Deployment
+See also the list of [contributors](https://github.com/kjsce-codecell/AskHere-React/contributors) who participated in this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-### `npm run build` fails to minify
+- Hat tip to anyone
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - [@JayMalave](https://github.com/jaymalave)
+  - [@TanviDeshpande](https://github.com/Tanvi-15)
+
+
+## 🤌 Contributing <a name=Contributers></a>
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are _**greatly appreciated**_.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request.
+Don't forget to give the _project a star_! Thanks again!
+
+1. Fork the project by [`git clone https://github.com/kjsce-codecell/AskHere-React.git`]
+2. Create A new branch [`git checkout -b feature/AmazingFeature`]
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📖 License <a name=license></a>
+
+Distributed under the MIT License.
