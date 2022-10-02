@@ -51,6 +51,7 @@ git clone https://github.com/kjsce-codecell/AskHere-React.git
 To run react app.
 
 ```bash
+npm install
 npm start
 ```
 
