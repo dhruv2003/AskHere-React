@@ -6,6 +6,7 @@ import {
 	Select,
 	Box,
 	Button,
+	Paper,
 } from "@mui/material";
 import React, { useState } from "react";
 import Option from "./Option";
@@ -41,12 +42,13 @@ const Question = ({ ques, setQuestions, questions }) => {
 	};
 
 	return (
-		<Card
+		<Paper
 			sx={{
 				padding: 5,
-				backgroundColor: theme.palette.primary.main,
+				// backgroundColor: theme.palette.primary.main,	
 				marginTop: 10,
 			}}
+			elevation={6}
 		>
 			<Box sx={{ display: "flex", flexDirection: "row" }}>
 				<TextField
@@ -105,7 +107,7 @@ const Question = ({ ques, setQuestions, questions }) => {
 					Save
 				</Button>
 			</Box>
-		</Card>
+		</Paper>
 	);
 };
 

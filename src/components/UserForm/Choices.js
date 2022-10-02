@@ -4,9 +4,12 @@ import {motion} from 'framer-motion'
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 
-const Choices = ({ options: choices }) => {
-	const [res, setRes] = useState([]);
+const Choices = ({ options: choices, handleChange }) => {
+	const [res, setRes] = useState();
 	// const [options, setOptions] = useState(choices);
+	useEffect(()=>{
+		handleChange(res)
+	},[res])
 	
 	return (
 		<>

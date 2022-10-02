@@ -49,8 +49,9 @@ let nextID = 0;
 
 const UserForm = () => {
 	const { id } = useParams();
-	const [result,setResult]=useState([])
-	
+	const [result,setResult]=useState()
+
+
 	return (
 		<div className={styles.container}>
 			<motion.div

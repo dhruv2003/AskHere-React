@@ -7,9 +7,13 @@ let nextID = 0;
 const Question = ({ question, setResult }) => {
 	const [answer,setAnswer]=useState("")
 
-    const handleChange=(event)=>{
-        setAnswer(event.target.value)
+    const handleChange=(res)=>{
+        setAnswer(res)
     }
+
+	useEffect(()=>{
+		console.log(answer)
+	},[answer])
 
 
 	return (
@@ -40,14 +44,14 @@ const Question = ({ question, setResult }) => {
 						className={styles.answer}
 						type="text"
                         value={answer}
-                        onChange={handleChange}
+                        onChange={(event)=>handleChange(event.target.value)}
 					></input>
 				
 			)}
 
 			{question.type === "choice" && (
 				
-					<Choices options={question.options} />
+					<Choices options={question.options} handleChange={handleChange}/>
 				
 			)}
 		</motion.div>
