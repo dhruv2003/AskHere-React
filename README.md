@@ -13,7 +13,7 @@
 
 ---
 
-<p align="center"> This is an open sources customizable forms app
+<p align="center"> This is an open source customizable forms app. 
 </p>
 
 ## 📝 Table of Contents
