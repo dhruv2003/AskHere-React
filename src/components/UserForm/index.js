@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+// import React, { useState } from "react";
+// import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import styles from "./UserForm.module.css";
 import Question from "./Question";
@@ -45,11 +45,11 @@ let data = {
 	],
 };
 
-let nextID = 0;
+// let nextID = 0;
 
 const UserForm = () => {
-	const { id } = useParams();
-	const [result,setResult]=useState()
+	// const { id } = useParams();
+	// const [result,setResult]=useState()
 
 
 	return (
@@ -78,7 +78,7 @@ const UserForm = () => {
 
 			{data.questions.map((question) => {
 				return (
-					<Question question={question} key={question.id} setResult={setResult}/>
+					<Question question={question} key={question.id} />
 				);
 			})}
 		</div>

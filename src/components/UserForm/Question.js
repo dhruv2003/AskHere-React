@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect,useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Question.module.css";
 import Choices from "./Choices";
 
 let nextID = 0;
-const Question = ({ question, setResult }) => {
+const Question = ({ question}) => {
 	const [answer,setAnswer]=useState("")
 
     const handleChange=(res)=>{
