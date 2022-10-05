@@ -65,6 +65,7 @@ npm start
 
 - [@AryaNair](https://github.com/Arya-A-Nair/)
 - [@PranaySingh](https://github.com/hailhydra1/)
+- [@dhruv2003](https://github.com/dhruv2003/)
 
 See also the list of [contributors](https://github.com/kjsce-codecell/AskHere-React/contributors) who participated in this project.
 
